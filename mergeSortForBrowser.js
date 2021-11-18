@@ -1,5 +1,3 @@
-const {performance} = require('perf_hooks');
-
 const _mergeArraysAsc = (a, b) => {
     const c = []
     while (a.length && b.length) {
@@ -47,11 +45,6 @@ let numOfComparisons = 0
 let numOfSwaps = 0
 
 console.log("Merge sort:")
-const t0 = performance.now();
 console.log(...mergeSort([23, -98, 5, 0, -3], true))
-const t1 = performance.now();
-console.log(`Sorting took ${t1 - t0} milliseconds.`)
 console.log(`Number of comparisons: ${numOfComparisons}`)
 console.log(`Number of swaps: ${numOfSwaps}`)
-
-module.exports = mergeSort
